@@ -1,0 +1,28 @@
+{% extends 'todotemplates/main.html.twig' %}
+{% block content %}
+
+    <div class="container mt-2 mb-4">
+
+      <div class="container bg-light rounded mt-5">
+        
+        <form class="row g-3 w-25 m-auto">
+          <div class="col-12 text-center">
+            <h2>Login</h2>
+          </div>
+          <div class="col-12">
+            <label for="staticEmail2" class="sr-only">Email</label>
+            <input type="text" class="form-control" id="staticEmail2" value="">
+          </div>
+          <div class="col-12">
+            <label for="inputPassword2" class="sr-only">Password</label>
+            <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+          </div>
+          <div class="col-12 text-center">
+            <button type="submit" class="btn btn-outline-primary mb-3 w-50">Login</button>
+          </div>
+        </form>
+
+      </div>
+        
+    </div>
+{% endblock %}

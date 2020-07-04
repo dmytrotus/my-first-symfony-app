@@ -11,12 +11,12 @@ class DefaultController extends AbstractController
      * @Route("/default", name="default")
      */
     public function index()
-    {
-        return $this->render('hello_page.html.twig');
+    {   
+        return $this->render('todotemplates/hello_page.html.twig');
     }
 
     public function login()
     {
-        return $this->render('login_page.html.twig');
+        return $this->render('todotemplates/login_page.html.twig');
     }
 }
