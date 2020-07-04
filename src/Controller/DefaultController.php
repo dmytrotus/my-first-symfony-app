@@ -12,7 +12,14 @@ class DefaultController extends AbstractController
      */
     public function index()
     {   
-        return $this->render('todotemplates/hello_page.html.twig');
+        $todos = [
+            'Wash my cat',
+            'Clean teeth'
+        ];
+        
+        return $this->render('todotemplates/hello_page.html.twig',[
+            'todos' => $todos
+            ]);
     }
 
     public function login()
