@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+    <title>Hello, from Symfony 4!</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <a href="{{ asset('login') }}" class="btn btn-outline-success">Login</a>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="container mt-2 mb-4">
+      <div class="text-center">
+        <h1>My First Symfony TO DO App</h1>
+      </div>
+    </div>
+
+    <div class="container bg-light p-5 rounded">
+      <form action="" class="col-md-4">
+         <div class="form-group">
+          <label for="task" class="sr-only">Your task</label>
+          <input type="text" class="form-control" id="task" name="task" placeholder="Wash my cat...">
+        </div>
+        <div class="form-group text-center mt-2">
+          <button type="submit" class="btn w-50 btn-success mb-3">Add To Do</button>
+        </div>
+      </form>
+      <div class="clearfix"></div>
+      <ul class="list-group">
+        <li class="list-group-item">Cras justo odio
+          <span class="float-right">
+            <button type="button" class="btn btn-sm btn-secondary">Done</button>
+            <button type="button" class="btn btn-sm btn-danger">Delete</button>
+          </span>
+        </li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+      </ul>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- Popper.js first, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  </body>
+</html>

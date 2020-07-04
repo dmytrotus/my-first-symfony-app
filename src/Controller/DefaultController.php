@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Controller;
+
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Routing\Annotation\Route;
+
+class DefaultController extends AbstractController
+{
+    /**
+     * @Route("/default", name="default")
+     */
+    public function index()
+    {
+        return $this->render('hello_page.html.twig');
+    }
+
+    public function login()
+    {
+        return $this->render('login_page.html.twig');
+    }
+}
