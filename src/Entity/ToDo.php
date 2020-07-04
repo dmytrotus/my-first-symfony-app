@@ -31,4 +31,21 @@ class ToDo
      * @ORM\Column(type="integer")
      */
     private $is_done;
+
+
+    //Getters and Setters
+
+    public function getContent(){
+        return $this->content;
+    }
+    public function setContent($content){
+        $this->content = $content;
+    }
+
+    public function getIsDone(){
+        return $this->is_done;
+    }
+    public function setIsDone($isDone){
+        $this->is_done = $isDone;
+    }
 }

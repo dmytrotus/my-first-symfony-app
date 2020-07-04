@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Entity\ToDo;
 
 class DefaultController extends AbstractController
 {
@@ -16,6 +17,9 @@ class DefaultController extends AbstractController
             'Wash my cat',
             'Clean teeth'
         ];
+
+        $todos = $this->getDoctrine()->getRepository
+        (ToDo::class)->findAll();
         
         return $this->render('todotemplates/hello_page.html.twig',[
             'todos' => $todos
