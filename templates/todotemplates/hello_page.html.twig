@@ -7,7 +7,7 @@
     </div>
 
     <div class="container bg-light p-5 rounded">
-      <form action="" class="col-md-4">
+      <form action="{{ asset('saveToDo') }}" method="POST" class="col-md-4">
          <div class="form-group">
           <label for="task" class="sr-only">Your task</label>
           <input type="text" class="form-control" id="task" name="task" placeholder="Wash my cat...">
@@ -21,8 +21,21 @@
         {% for todo in todos %}
         <li class="list-group-item">{{ todo.content }}
           <span class="float-right">
-            <button type="button" class="btn btn-sm btn-secondary">Done</button>
-            <button type="button" class="btn btn-sm btn-danger">Delete</button>
+            <form class="d-inline" action="{{ asset('changeIsDoneToDo') }}" method="POST">
+              <input type="hidden" name="todoId" value="{{ todo.id }}">
+              {% if(todo.is_done == 1) %}
+              <input type="hidden" name="isDone" value="0">
+              <span class="btn alert-success">Done</span>
+              <button type="submit" class="btn btn-sm btn-default">Make undone</button>
+              {% else %}
+              <input type="hidden" name="isDone" value="1">
+              <button type="submit" class="btn btn-sm btn-secondary">Done</button>
+              {% endif %}
+            </form>
+            <form class="d-inline" action="{{ asset('deleteToDo') }}" method="POST">
+              <input type="hidden" name="todoId" value="{{ todo.id }}">
+              <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+            </form>
           </span>
         </li>
         {% endfor %}

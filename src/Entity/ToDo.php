@@ -42,10 +42,10 @@ class ToDo
         $this->content = $content;
     }
 
-    public function getIsDone(){
+    public function getIs_Done(){
         return $this->is_done;
     }
-    public function setIsDone($isDone){
+    public function setIs_Done($isDone){
         $this->is_done = $isDone;
     }
 }
