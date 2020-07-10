@@ -16,10 +16,17 @@
       <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <a href="{{ asset('login') }}" class="btn btn-outline-success mr-2">Login</a>
-          <a href="{{ asset('/') }}" class="btn btn-outline-danger">Main page</a>
         </div>
       </div>
     </nav>
+      <div class="text-center container mt-2 mb-4">
+        <h1>Hello from my Symfony App </h1>
+        <p>This app based on Symfony v4</p>
+        {% if(app.request.get('_route')) != 'index' %}
+         <a href="{{ asset('/') }}" class="btn btn btn-outline-danger mr-2">Back to Main Page</a>
+       {% endif %}
+      </div>
+
       {% block content %}
       {% endblock %}
 

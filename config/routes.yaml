@@ -4,12 +4,18 @@ index:
 login:
     path: /login
     controller: App\Controller\DefaultController::login
+
+
+##todoApp
+ToDoIndex:
+    path: /todoapp/
+    controller: App\Controller\ToDoController::index
 saveToDo:
-    path: /saveToDo
-    controller: App\Controller\DefaultController::saveToDo
+    path: /todoapp/saveToDo
+    controller: App\Controller\ToDoController::saveToDo
 deleteToDo:
-    path: /deleteToDo
-    controller: App\Controller\DefaultController::deleteToDo
+    path: /todoapp/deleteToDo
+    controller: App\Controller\ToDoController::deleteToDo
 changeIsDoneToDo:
-    path: /changeIsDoneToDo
-    controller: App\Controller\DefaultController::changeIsDoneToDo
+    path: /todoapp/changeIsDoneToDo
+    controller: App\Controller\ToDoController::changeIsDoneToDo

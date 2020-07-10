@@ -1,19 +1,19 @@
-{% extends 'todotemplates/main.html.twig' %}
+{% extends 'main.html.twig' %}
 {% block content %}
     <div class="container mt-2 mb-4">
       <div class="text-center">
-        <h1>My First Symfony TO DO App</h1>
+        <h3>ToDo App</h3>
       </div>
     </div>
 
     <div class="container bg-light p-5 rounded">
-      <form action="{{ asset('saveToDo') }}" method="POST" class="col-md-4">
-         <div class="form-group">
+      <form action="{{ path('saveToDo') }}" method="POST" class="col-md-12">
+         <div class="form-group col-md-6 m-auto">
           <label for="task" class="sr-only">Your task</label>
-          <input type="text" class="form-control" id="task" name="task" placeholder="Wash my cat...">
+          <input type="text" class="form-control" id="task" name="task" placeholder="Write the task...">
         </div>
         <div class="form-group text-center mt-2">
-          <button type="submit" class="btn w-50 btn-success mb-3">Add To Do</button>
+          <button type="submit" class="btn w-25 btn-success mb-3">Add To Do</button>
         </div>
       </form>
       <div class="clearfix"></div>
@@ -21,7 +21,7 @@
         {% for todo in todos %}
         <li class="list-group-item">{{ todo.content }}
           <span class="float-right">
-            <form class="d-inline" action="{{ asset('changeIsDoneToDo') }}" method="POST">
+            <form class="d-inline" action="{{ path('changeIsDoneToDo') }}" method="POST">
               <input type="hidden" name="todoId" value="{{ todo.id }}">
               {% if(todo.is_done == 1) %}
               <input type="hidden" name="isDone" value="0">
@@ -32,7 +32,7 @@
               <button type="submit" class="btn btn-sm btn-secondary">Done</button>
               {% endif %}
             </form>
-            <form class="d-inline" action="{{ asset('deleteToDo') }}" method="POST">
+            <form class="d-inline" action="{{ path('deleteToDo') }}" method="POST">
               <input type="hidden" name="todoId" value="{{ todo.id }}">
               <button type="submit" class="btn btn-sm btn-danger">Delete</button>
             </form>
