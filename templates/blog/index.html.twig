@@ -1,0 +1,15 @@
+{% extends 'main.html.twig' %}
+{% block content %}
+
+
+      <div class="container bg-light rounded mt-5 text-center">
+        <h2>Blog Posts Should be here</h2>
+        <ul>
+        	{% for post in posts %}
+        	<li>{{ post.title }}</li>
+        	{% endfor %}
+        </ul>
+
+      </div>
+        
+{% endblock %}

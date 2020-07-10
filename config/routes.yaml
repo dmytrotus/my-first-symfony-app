@@ -19,3 +19,28 @@ deleteToDo:
 changeIsDoneToDo:
     path: /todoapp/changeIsDoneToDo
     controller: App\Controller\ToDoController::changeIsDoneToDo
+
+
+##miniBlogAppClient
+BlogIndex:
+    path: /BlogIndex/
+    controller: App\Controller\BlogController::index
+BlogSingle:
+    path: /BlogSingle/
+    controller: App\Controller\ToDoController::BlogSingle
+#miniBlogAppAdmin
+BlogAdminIndex:
+    path: /admin/BlogIndex/
+    controller: App\Controller\Admin\BlogController::index
+BlogAdminSingle:
+    path: /admin/BlogIndex/
+    controller: App\Controller\Admin\BlogController::ShowSingle
+BlogAdminSaveSingle:
+    path: /admin/SaveSingle/
+    controller: App\Controller\Admin\BlogController::SaveSingle
+BlogAdminUpdateSingle:
+    path: /admin/UpdateSingle/
+    controller: App\Controller\Admin\BlogController::UpdateSingle
+BlogAdminDeleteSingle:
+    path: /admin/DeleteSingle/
+    controller: App\Controller\Admin\BlogController::DeleteSingle
